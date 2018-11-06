@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardOrListViewComponent } from './card-or-list-view/card-or-list-view.component';
 import { UsageComponent } from './usage/usage.component';
+import { NgTemplateOutletExampleComponent } from './ng-template-outlet-example/ng-template-outlet-example.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardOrListViewComponent,
-    UsageComponent
+    UsageComponent,
+    NgTemplateOutletExampleComponent
   ],
   imports: [
     BrowserModule,
