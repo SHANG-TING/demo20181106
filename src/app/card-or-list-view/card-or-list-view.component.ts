@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-card-or-list-view',
+  selector: 'card-or-list-view',
   templateUrl: './card-or-list-view.component.html',
-  styleUrls: ['./card-or-list-view.component.scss']
+  styleUrls: ['./card-or-list-view.component.scss'],
 })
 export class CardOrListViewComponent implements OnInit {
+  @Input()
+  items: {
+    header: string;
+    content: string;
+  }[] = [];
 
-  constructor() { }
+  @Input()
+  mode: 'card' | 'list' = 'card';
 
-  ngOnInit() {
-  }
+  constructor() {}
 
+  ngOnInit() {}
 }
