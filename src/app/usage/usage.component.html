@@ -1,9 +1,30 @@
 <card-or-list-view [items]="items"
                    [mode]="mode">
-  <div *cardItem>
-    Static Card Template
+
+  <div *cardItem="let item">
+    <h1>card [一般]</h1>
+    <h2>{{item.header}}</h2>
+    <p>{{item.content}}</p>
   </div>
-  <li *listItem>
-    Static List Template
+
+  <ng-template cardItem
+               let-item>
+    <div>
+      <h1>card [語法糖]</h1>
+      <h2>{{item.header}}</h2>
+      <p>{{item.content}}</p>
+    </div>
+  </ng-template>
+
+  <li *listItem="let item">
+    <h1>list [一般]</h1>
+    <h2>{{item.header}}: {{item.content}}</h2>
   </li>
+
+  <ng-template listItem
+               let-item>
+    <h1>list [語法糖]</h1>
+    <h2>{{item.header}}: {{item.content}}</h2>
+  </ng-template>
+
 </card-or-list-view>

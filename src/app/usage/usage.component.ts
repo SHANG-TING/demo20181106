@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./usage.component.scss'],
 })
 export class UsageComponent implements OnInit {
-  mode = 'list';
+  mode = 'card';
   items = [
     {
       header: 'Creating Reuseable Components with NgTemplateOutlet in Angular',
